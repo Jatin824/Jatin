@@ -153,42 +153,7 @@
       <img src="assets/images/Sample10.avif" class="mx-auto mt-6 w-56 rounded-2xl shadow-2xl" />
     </div>
   </section>
-
-  <!-- CONTROL BUTTON -->
-  <div class="fixed bottom-12 left-1/2 transform -translate-x-1/2 z-50">
-    <button id="next" class="px-6 py-3 rounded-2xl bg-pink-500 text-white text-lg shadow-lg hover:scale-105 transition">
-      Agree 💕
-    </button>
-  </div>
-
-  <script>
-    const pages = document.querySelectorAll('.page');
-    let index = 0;
-
-    // Continuous hearts everywhere
-    function spawnHeart() {
-      const heart = document.createElement('div');
-      heart.className = 'heart';
-      heart.innerText = '❤';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = 4 + Math.random() * 4 + 's';
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 8000);
-    }
-
-    setInterval(spawnHeart, 300);
-
-    function showPage(i) {
-      pages.forEach((p, idx) => p.classList.toggle('active', idx === i));
-    }
-
-    document.getElementById('next').onclick = () => {
-      if (index < pages.length - 1) {
-        index++;
-        showPage(index);
-      }
-    };
-    <!-- NEW EMOTIONAL PAGE -->
+  <!-- NEW EMOTIONAL PAGE -->
 <section class="page">
   <div class="text-center px-6 max-w-3xl">
     
@@ -258,6 +223,42 @@
     />
   </div>
 </section>
+
+  <!-- CONTROL BUTTON -->
+  <div class="fixed bottom-12 left-1/2 transform -translate-x-1/2 z-50">
+    <button id="next" class="px-6 py-3 rounded-2xl bg-pink-500 text-white text-lg shadow-lg hover:scale-105 transition">
+      Agree 💕
+    </button>
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    let index = 0;
+
+    // Continuous hearts everywhere
+    function spawnHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerText = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 4 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }
+
+    setInterval(spawnHeart, 300);
+
+    function showPage(i) {
+      pages.forEach((p, idx) => p.classList.toggle('active', idx === i));
+    }
+
+    document.getElementById('next').onclick = () => {
+      if (index < pages.length - 1) {
+        index++;
+        showPage(index);
+      }
+    };
+
   </script>
 
 </body>
